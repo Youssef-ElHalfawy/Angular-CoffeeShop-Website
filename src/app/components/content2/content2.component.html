@@ -1,0 +1,22 @@
+<div [ngClass]="{'container':true}" class="rounded my-5" >
+    <h1 class="text-center text-white py-3">Our Products</h1>
+    <hr class="border border-warning border-2 opacity-75">
+    <button appHighlight="whitesmoke" class="btn fw-bold btn-outline-warning mx-3" 
+        *ngFor="let product of products"
+        (click)="gotoProduct(product.id)">{{product?.name | uppercase }}</button>
+    <div class="row my-5 d-flex justify-content-around">
+        <app-sidediv class="col-sm-6 col-lg-3"
+            *ngFor="let product of products"
+            [childProduct]="product"></app-sidediv>
+        <!-- <ng-container *ngIf="render; else elseblock"> -->
+        <!-- <div appScale class="mb-5 card col-sm-6 col-lg-3" style="width: 13rem;"
+            *ngFor="let product of products">
+        </div> -->
+        <!-- </ng-container> -->
+        <!-- <ng-template #elseblock>
+            <div [ngStyle]="{'color': 'darkred','font-size':'large'}">
+                Products were not rendered!
+            </div>
+        </ng-template> -->
+    </div>
+</div>

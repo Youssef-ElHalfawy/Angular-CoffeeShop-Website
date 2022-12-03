@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="my-4 mx-auto card" style="width: 30rem;">
+        <img [src]="theProduct?.src" class="card-img-top" alt="...">   <!-- ? is in case it was undefined or null -->
+        <div [ngSwitch]="theProduct?.quantity" class="card-body row">
+            <div class="col-sm-9">
+                <h5 class="card-title">{{theProduct?.name}} <span class="fs-6">({{theProduct?.price | currency}})</span></h5>
+                <p *ngSwitchCase="0" class="card-text">Out of Order</p>
+                <p *ngSwitchCase="1" class="card-text">Only 1 left</p>
+                <p *ngSwitchCase="2" class="card-text">Only 2 left</p>
+                <p *ngSwitchDefault class="card-text">Available</p>
+            </div>
+            <div class="col-sm-3">
+                <a *ngIf="theProduct?.quantity !=0" (click)="gotoRequests()" class="btn btn-warning px-4 mx-2 py-3">Order</a>
+            </div>
+            <p class="mt-3 text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, iusto possimus culpa, aliquid eveniet harum cupiditate excepturi est ab distinctio accusamus laboriosam porro sit, inventore velit placeat magni perspiciatis totam?</p>
+        </div>
+    </div>
+</div>

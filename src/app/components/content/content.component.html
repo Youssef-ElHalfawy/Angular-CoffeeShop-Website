@@ -1,0 +1,11 @@
+<div class="container rounded my-5">
+    <h1 class="text-center text-white py-3">Requests</h1>
+    <hr class="border border-warning border-2 opacity-75 mb-4">
+    <div class="container pb-3">
+        <app-reqinput (sendRequests)="receiveReq($event)"></app-reqinput>
+        <app-requests
+            *ngFor="let request of reqList; let i = index"
+            [theRequest]="request" [reqIndex]="i"
+            (deleteReq)="removeRFromList($event)"></app-requests>
+    </div>
+</div>

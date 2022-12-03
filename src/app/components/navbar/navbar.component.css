@@ -1,0 +1,13 @@
+.navbar{
+    background-color: rgb(53, 101, 104);
+    box-shadow: 1px 3px 6px rgb(18, 24, 24);
+}
+
+a.nav-link{
+    background-color: rgb(143, 100, 66);
+}
+
+a.nav-link.active,
+a.nav-link:hover{
+    background-color: rgb(87, 56, 30);
+}

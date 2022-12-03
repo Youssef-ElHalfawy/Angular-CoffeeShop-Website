@@ -1,0 +1,10 @@
+<div class="row mb-4">
+    <div class="col-sm-8 col-lg-10 mt-2">
+        <input type="text" class="form-control" [(ngModel)]="inputvalue" placeholder="Enter your Request">
+        <input type="text" class="form-control my-2" [(ngModel)]="inputdetails" placeholder="Enter your Request Details">
+    </div>
+    <div class="col-sm-4 col-lg-2">
+        <button class="w-100 h-100 fs-4 btn btn-success" (click)="addToList()">Add</button>
+    </div>
+</div>
+<div *ngIf="!flag" class="col-lg-8 mx-auto bg-danger fw-bold fs-4 text-center text-warning my-3 p-1">Your Request is not a product we provide!</div>

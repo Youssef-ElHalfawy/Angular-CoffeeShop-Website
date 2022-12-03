@@ -1,0 +1,9 @@
+<div class="row  border border-1 border-warning border-opacity-25 py-2 mt-2">
+    <div class="col-sm-9 col-lg-10 mt-2">
+        <div class="bg-light rounded text-dark mx-2">Request {{reqIndex+1}}: {{theRequest.req}}</div>
+        <div class="bg-light rounded text-dark mx-2 my-2">Details: {{theRequest.detail}}</div>
+    </div>
+    <div class="col-sm-3 col-lg-2">
+        <button class="btn btn-danger fs-5 h-100 w-100 d-block" (click)="removeRFromList()">Remove</button>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container border border-warning border-2 rounded-3 mt-5 p-5 text-white">
+  <form [formGroup]="newUser" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        formControlName="name"
+      />
+      <ng-container *ngIf="getName.touched">
+        <div class="form-text text-danger" *ngIf="usernameHasError('required')">
+          Username is required
+        </div>
+        <div class="form-text text-danger" *ngIf="usernameHasError('pattern')">
+          Not a valid Username
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        formControlName="email"
+      />
+      <ng-container *ngIf="getEmail.touched">
+        <div class="form-text text-danger" *ngIf="emailHasError('required')">
+          Email is required
+        </div>
+        <div class="form-text text-danger" *ngIf="emailHasError('email')">
+          Not a vaild email
+        </div>
+      </ng-container>
+    </div>
+
+    <button type="submit" class="btn btn-warning opacity-75 fw-bold mt-3">
+      {{ userId ? "Edit User" : "Add New User" }}
+    </button>
+  </form>
+</div>

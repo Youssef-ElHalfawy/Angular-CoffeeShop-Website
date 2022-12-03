@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 96vw;
+    margin:10px auto;
+    background: url("https://c1.wallpaperflare.com/preview/642/898/504/abstract-backdrop-background-board.jpg");
+}

@@ -1,0 +1,11 @@
+<div appScale class="mb-5 ms-4 card col-sm-6 col-lg-3" style="width: 13rem;">
+    <img [src]="childProduct?.src" class="card-img-top" alt="...">   <!-- ? is in case it was undefined or null -->
+    <div [ngSwitch]="childProduct?.quantity" class="card-body">
+        <h5 class="card-title">{{childProduct?.name}} <span class="fs-6">({{childProduct?.price | currency}})</span></h5>
+        <p *ngSwitchCase="0" class="card-text">Out of Order</p>
+        <p *ngSwitchCase="1" class="card-text">Only 1 left</p>
+        <p *ngSwitchCase="2" class="card-text">Only 2 left</p>
+        <p *ngSwitchDefault class="card-text">Available</p>
+        <a *ngIf="childProduct?.quantity !=0" (click)="gotoRequests()" class="btn btn-warning">Order</a>
+    </div>
+</div>

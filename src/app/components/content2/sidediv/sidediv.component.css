@@ -1,0 +1,23 @@
+.container{
+    background: rgb(207, 218, 253);
+    color: whitesmoke;
+    margin: 3rem;
+    padding: 2rem;
+    width: 350px;
+}
+
+button{
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 14px;
+    margin-top: 1em;
+    border-radius: 5px;
+    color: rgb(207, 218, 253);
+    background-color: goldenrod;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+    
